@@ -1,32 +1,19 @@
-import { Inter } from '@next/font/google'
-import Link from 'next/link'
+import React from 'react';
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home({ productId = 100 }) {
+const index = () => {
   return (
-
-    <>
-
-      <h1>This is the Index.js page</h1>
-      <div>
-
-        <Link href={'/blog'}>
-          <h1>Go to blog page</h1>
-        </Link>
-
-  
+    <div>
+      <h1>This is the index.js page</h1>
 
 
 
 
 
-      </div>
 
 
+      
+    </div>
+  );
+};
 
-
-
-    </>
-  )
-}
+export default index;
