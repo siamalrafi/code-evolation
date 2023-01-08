@@ -1,3 +1,6 @@
+import Users from './Users';
+
+
 function user({ users }) {
     console.log(users);
     return (
@@ -5,9 +8,9 @@ function user({ users }) {
             <h1>This is the user list.</h1>
             {
                 users?.map(user => <div key={user.id}>
-                    <p> {user.name}</p>
-                    <p>{user.email}</p>
-                </div>)
+                    <Users user={user}></Users>
+                </div>
+                )
             }
 
         </div>
