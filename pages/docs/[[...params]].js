@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 
 const Docs = () => {
-
     const router = useRouter();
     const { params = [] } = router.query;
     console.log(params);
@@ -12,7 +11,6 @@ const Docs = () => {
     } else if (params.length === 2) {
         return <h1>this is the featurs =={params[0]}  </h1>
     }
-
 
 
     return (
