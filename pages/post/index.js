@@ -9,7 +9,6 @@ function PostList({ posts }) {
                 posts.map(post => {
                     return (
                         <div>
-
                             <Link href={`/post/${post?.id}`}>
                                 <h1>This is the post {post.id}</h1>
 
@@ -18,19 +17,17 @@ function PostList({ posts }) {
                     )
                 })
             }
-
-
         </div>
     );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts`)
     const data = await response.json();
 
     return {
         props: {
-            posts: data.slice(0, 5)
+            posts: data.slice(0, 3)
         }
     }
 }
