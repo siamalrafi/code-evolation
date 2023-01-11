@@ -27,8 +27,6 @@ export async function getStaticPaths() {
     };
 };
 
-
-
 export async function getStaticProps(ctx) {
     const { params } = ctx;
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
