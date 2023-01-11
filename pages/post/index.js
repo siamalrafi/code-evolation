@@ -11,7 +11,6 @@ function PostList({ posts }) {
                         <div key={i} >
                             <Link href={`/post/${post.id}`} passHref>
                                 This is the Link.
-
                                 <h1>{post.title}</h1>
                             </Link>
                         </div>
