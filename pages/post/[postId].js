@@ -9,7 +9,6 @@ function postId({ post }) {
 };
 
 export async function getStaticPaths() {
-
     return {
         paths: [
             { params: { postId: '1' } },
@@ -19,10 +18,6 @@ export async function getStaticPaths() {
         fallback: false,
     };
 }
-
-
-
-
 
 
 export async function getStaticProps(ctx) {
