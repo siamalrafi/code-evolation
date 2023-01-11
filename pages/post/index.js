@@ -29,7 +29,7 @@ export async function getStaticProps(ctx) {
 
     return {
         props: {
-            posts: data.slice(0, 3)
+            posts: data
         }
     }
 }

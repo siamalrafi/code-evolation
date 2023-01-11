@@ -1,21 +1,20 @@
 function postId({ post }) {
-    console.log(post);
 
     return (
         <div>
             <h1>postId</h1>
-            <h1>postId</h1>
+            <h1>{post.title}</h1>
         </div>
     );
-}
-
+};
 
 export async function getStaticPaths() {
+
     return {
         paths: [
-            { params: { postId: '1' }},
-            { params: { postId: '2' }},
-            { params: { postId: '3' }},
+            { params: { postId: '1' } },
+            { params: { postId: '2' } },
+            { params: { postId: '3' } },
         ],
         fallback: false,
     };
