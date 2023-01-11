@@ -1,25 +1,30 @@
-function singlePost() {
+function postId({ post }) {
+    console.log(post);
+
     return (
         <div>
-            Enter
+            <h1>postId</h1>
+            <h1>postId</h1>
         </div>
     );
-};
+}
+
 
 export async function getStaticPaths() {
     return {
         paths: [
-            { params: { id: '1' } },
-            {
-                params: { id: '2' },
-            },
-            {
-                params: { id: '2' },
-            },
+            { params: { postId: '1' }},
+            { params: { postId: '2' }},
+            { params: { postId: '3' }},
         ],
         fallback: false,
     };
 }
+
+
+
+
+
 
 export async function getStaticProps(ctx) {
     const { params } = ctx;
@@ -33,4 +38,4 @@ export async function getStaticProps(ctx) {
     }
 }
 
-export default singlePost;
+export default postId;

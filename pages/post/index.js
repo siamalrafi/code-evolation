@@ -1,27 +1,29 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 function PostList({ posts }) {
-    console.log(posts);
+    console.log(posts.length);
     return (
         <div>
-            <h1> Post list</h1>
+            <h1>This is the PostList.</h1>
             {
-                posts.map(post => {
+                posts?.map((post, i) => {
                     return (
-                        <div>
-                            <Link href={`/post/${post?.id}`}>
-                                <h1>This is the post {post.id}</h1>
-
-                                Link</Link>
+                        <div key={i} >
+                            <Link href={`/post/${post.id}`} passHref>
+                                This is the Link.
+                            </Link>
+                            <h1>{post.title}</h1>
                         </div>
+
                     )
                 })
             }
+
         </div>
     );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps(ctx) {
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts`)
     const data = await response.json();
 
