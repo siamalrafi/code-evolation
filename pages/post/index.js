@@ -8,6 +8,7 @@ function PostList({ posts }) {
             {
                 posts?.map((post, i) => {
                     return (
+
                         <div key={i} >
                             <Link href={`/post/${post.id}`} passHref>
                                 This is the Link.
