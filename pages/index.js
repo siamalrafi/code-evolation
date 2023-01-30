@@ -33,7 +33,6 @@ const index = () => {
 
 
 
-
     </div>
   );
 };
