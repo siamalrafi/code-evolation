@@ -29,7 +29,6 @@ const index = () => {
 
 
 
-
     </div>
   );
 };
