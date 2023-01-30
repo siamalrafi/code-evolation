@@ -4,6 +4,7 @@ import Link from 'next/link'
 const index = () => {
   return (
     <div>
+      
       <h1>This is the index.js page</h1>
 
       <hr /><hr /><hr />
