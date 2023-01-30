@@ -15,7 +15,6 @@ const index = () => {
       <Link href='/post'>
         <h1>This is the post.</h1>
       </Link>
-
     </div>
   );
 };
