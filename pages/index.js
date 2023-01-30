@@ -16,7 +16,6 @@ const index = () => {
         <h1>This is the post.</h1>
       </Link>
 
-
     </div>
   );
 };
